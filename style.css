@@ -1,0 +1,50 @@
+.carousel,.item{height:95%;}
+.carousel-inner{height:100%;}
+
+#jumbo{
+  background: rgb(100, 100,100);
+  background: rgba(100,100,100,0.6);
+}
+
+@font-face {
+  font-family: Swag;
+  src: url('goodvibes.otf');
+}
+
+#pure{
+  text-align: center;
+  font-weight: bold;
+  color: rgba(255,255,255,0.7);
+}
+
+h1{
+  font-family: Swag;
+}
+
+.carousel .one {
+    background: url(UCSB-from-air.jpg);
+    background-size: cover;
+    -moz-background-size: cover;
+}
+.carousel .two {
+    background-image: url(eng.jpg);
+    background-size: cover;
+    -moz-background-size: cover;
+}
+.carousel .three {
+    background: url(twr.jpg) center no-repeat;
+    background-size: cover;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    -o-background-size: cover;
+}
+.carousel .four {
+    background: url(dlg.jpg);
+    background-size: cover;
+    -moz-background-size: cover;
+}
+.carousel .five {
+    background: url(ucen.jpg);
+    background-size: cover;
+    -moz-background-size: cover;
+}
