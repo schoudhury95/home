@@ -6,6 +6,17 @@
   background: rgba(100,100,100,0.6);
 }
 
+#gold{
+  background: rgb(255,215,0);
+  background: rgba(255,215,0,0.6);
+}
+
+#blue{
+  font-size: 5vw;
+  background: rgb(30,144,255);
+  background: rgba(30,144,255,0.6);
+}
+
 @font-face {
   font-family: Swag;
   src: url('goodvibes.otf');
@@ -14,6 +25,13 @@
 #pure{
   text-align: center;
   font-weight: bold;
+  color: rgba(255,255,255,0.7);
+}
+
+#pureSubHeading{
+  text-align: center;
+  font-weight: bold;
+  font-size: 5vw;
   color: rgba(255,255,255,0.7);
 }
 
