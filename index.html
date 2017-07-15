@@ -10,7 +10,7 @@
 
   <body>
 
-    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <div id="myCarousel" class="carousel slide carousel-fade" data-ride="carousel">
 
     <div class = "navbar navbar-inverse navbar-static-top">
       <div class = "container">
@@ -119,20 +119,18 @@
         $('.carousel').carousel({interval: 0});
       });
 
-      $('.carousel .one').click(function(){
-        $(this).effect("bounce", { times:3 }, 300);
-      });
+
 // all lazy loaded classes occur below
 
-      // $('.lazy').Lazy({
-      //     // your configuration goes here
-      //     scrollDirection: 'vertical',
-      //     effect: 'fadeIn',
-      //     visibleOnly: true,
-      //     onError: function(element) {
-      //         console.log('error loading ' + element.data('src'));
-      //     }
-      // });
+      $('.lazy').Lazy({
+          // your configuration goes here
+          scrollDirection: 'vertical',
+          effect: 'fadeIn',
+          visibleOnly: true,
+          onError: function(element) {
+              console.log('error loading ' + element.data('src'));
+          }
+      });
 
 </script>
   </body>
