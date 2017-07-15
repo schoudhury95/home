@@ -67,29 +67,29 @@ h1{
 }
 
 .carousel .one {
-    background: url(UCSB-from-air.jpg);
+    background: url('res/img/UCSB-from-air.jpg');
     background-size: cover;
     -moz-background-size: cover;
 }
 .carousel .two {
-    background-image: url(eng.jpg);
+    background-image: url('res/img/eng.jpg');
     background-size: cover;
     -moz-background-size: cover;
 }
 .carousel .three {
-    background: url(twr.jpg) center no-repeat;
+    background: url('res/img/twr.jpg') center no-repeat;
     background-size: cover;
     -moz-background-size: cover;
     -webkit-background-size: cover;
     -o-background-size: cover;
 }
 .carousel .four {
-    background: url(dlg.jpg);
+    background: url('res/img/dlg.jpg');
     background-size: cover;
     -moz-background-size: cover;
 }
 .carousel .five {
-    background: url(ucen.jpg);
+    background: url('res/img/ucen.jpg');
     background-size: cover;
     -moz-background-size: cover;
 }
