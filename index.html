@@ -4,7 +4,6 @@
     <title>Subho's Website</title>
     <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
     <link href = "bootstrap-3.3.2-dist/css/bootstrap.min.css" rel = "stylesheet">
-    <link href = "bootstrap-3.3.2-dist/css/styles.css" rel = "stylesheet">
     <link href = "style.css" rel="stylesheet">
 
   </head>
@@ -36,7 +35,7 @@
 
   <!-- Wrapper for slides -->
   <div class="carousel-inner" role="listbox">
-    <div class="item active one">
+    <div class="item active one lazy">
       <div class="jumbotron" id="jumbo">
         <div class="container">
           <h1 id="pure">Welcome to an Engineer's Haven</h1>
@@ -44,7 +43,7 @@
       </div>
     </div>
 
-    <div class="item two">
+    <div class="item two lazy">
 
       <div class="jumbotron" id="jumbo">
         <div class="container">
@@ -72,7 +71,7 @@
 
     </div>
 
-    <div class="item three">
+    <div class="item three lazy">
       <div class="jumbotron" id="jumbo">
         <div class="container">
           <h1 id="pure">Projects</h1>
@@ -80,7 +79,7 @@
       </div>
     </div>
 
-    <div class="item four">
+    <div class="item four lazy">
       <div class="jumbotron" id="jumbo">
         <div class="container">
           <h1 id="pure">About Me</h1>
@@ -88,7 +87,7 @@
       </div>
     </div>
 
-    <div class="item five">
+    <div class="item five lazy">
       <div class="jumbotron" id="jumbo">
         <div class="container">
           <h1 id="pure">Contact Me</h1>
@@ -100,21 +99,34 @@
 
 </div>
 
-    <script src = "http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src = "jquery-3.2.1.min.js"></script>
     <script src = "bootstrap-3.3.2-dist/js/bootstrap.js"></script>
+    <script src = "jquery.lazy.min.js"></script>
+    <script src = "jquery-ui.min.js"></script>
+
     <script type="text/javascript">
-    $('.navbar li').click(function(e) {
-    $('.navbar li.active').removeClass('active');
-    var $this = $(this);
-    if (!$this.hasClass('active')) {
-        $this.addClass('active');
-    }
-    e.preventDefault();
-});
-  $(document).ready(function() {
-    $('.carousel').carousel({interval: 0});
-  });
-  // $(".carousel .one").
+
+      $('.navbar li').click(function(e) {
+        $('.navbar li.active').removeClass('active');
+        var $this = $(this);
+        if (!$this.hasClass('active')) {
+            $this.addClass('active');
+        }
+        e.preventDefault();
+      });
+
+      $(document).ready(function() {
+        $('.carousel').carousel({interval: 0});
+      });
+
+      $('.carousel .one').click(function(){
+        $(this).effect("bounce", { times:3 }, 300);
+      });
+// all lazy loaded classes occur below
+      $(function() {
+        $('.lazy').Lazy();
+      });
+
 </script>
   </body>
 </html>
