@@ -1,6 +1,17 @@
 .carousel,.item{height:95%;}
 .carousel-inner{height:100%;}
 
+.card-container{
+  margin: 0px 15px 0px 15px;
+}
+
+.card-set {
+}
+
+.card {
+  padding: 5px;
+}
+
 #jumbo1{
   background: rgba(173,216,230,0.6);
 }
