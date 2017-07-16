@@ -1,9 +1,24 @@
 .carousel,.item{height:95%;}
 .carousel-inner{height:100%;}
 
-#jumbo{
-  background: rgb(100, 100,100);
-  background: rgba(100,100,100,0.6);
+#jumbo1{
+  background: rgba(173,216,230,0.6);
+}
+
+#jumbo2{
+  background: rgba(255,179,186,0.6);
+}
+
+#jumbo3{
+  background: rgba(186,225,255,0.6);
+}
+
+#jumbo4{
+  background: rgba(186,255,201,0.6);
+}
+
+#jumbo5{
+  background: rgba(232,205,255,0.6);
 }
 
 #gold{
@@ -71,6 +86,7 @@ h1{
     background-size: cover;
     -moz-background-size: cover;
 }
+
 .carousel .two {
     background-image: url('res/img/eng.jpg');
     background-size: cover;
