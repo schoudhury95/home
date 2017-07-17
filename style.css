@@ -1,9 +1,6 @@
 .carousel,.item{height:95%;}
 .carousel-inner{height:100%;}
 
-.row {
-  margin-bottom: 1%;
-}
 .card-container{
   color: rgba(255,255,255,0.7);
   font-family: cursive;
@@ -39,6 +36,7 @@ span {
   padding: 5px;
   height: inherit;
   font-size: 3vh;
+  margin: 1%;
 }
 
 #jumbo1{
