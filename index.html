@@ -51,71 +51,72 @@
         </div>
       </div>
 
-      <div class="container-fluid card-container" id = "education">
-        <div class="card-table-title" id="jumbo2">
-          <span>Education</span>
-        </div>
-        <div class="card-table">
-          <div class="row">
-            <div class="col-xs-4 col-sm-2">
-              <div class="card" id="jumbo2">
-                UCSB Logo
-              </div>
-            </div>
-            <div class="col-xs-8 col-sm-10">
-              <div class="card" id="jumbo2">
-                Bachelors in Computer Engineering
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
 
-      <div class = "container-fluid card-container" id = "skills">
-        <div class = "card-table-title" id = "jumbo2">
-          <span>Skills</span>
-        </div>
-
-        <div class = "card-table">
-          <div class = "row card-set">
-            <!-- put all the qualifications below -->
-            <div class="col-xs-12 col-sm-4 col-md-4 card">
-              <div class="card" id="jumbo2">
-                Machine Learning and Artificial Intelligence
-              </div>
+          <div class="container-fluid card-container" id = "education">
+            <div class="card-table-title" id="jumbo2">
+              <span>Education</span>
             </div>
-            <div class="col-xs-12 col-sm-4 col-md-4 card">
-              <div class="card" id="jumbo2">
-                Object Oriented Design Patterns
-              </div>
-            </div>
-            <div class="col-xs-12 col-sm-4 col-md-4 card">
-              <div class="card" id="jumbo2">
-                Data Structures and Algorithms
+            <div class="card-table">
+              <div class="row">
+                <div class="col-xs-4 col-sm-2">
+                  <div class="card" id="jumbo2">
+                    <img src="res/img/ucsbseal-color-rgb.png" class="img-responsive" alt="UCSB Logo">
+                  </div>
+                </div>
+                <div class="col-xs-8 col-sm-10">
+                  <div class="card" id="jumbo2">
+                    Bachelors in Computer Engineering
+                  </div>
+                </div>
               </div>
             </div>
           </div>
 
-          <div class = "row card-set">
-            <!-- put all the qualifications below -->
-            <div class="col-xs-12 col-sm-4 col-md-4  card">
-              <div class="card" id="jumbo2">
-                Problem Solving in C/C++
-              </div>
+          <div class = "container-fluid card-container" id = "skills">
+            <div class = "card-table-title" id = "jumbo2">
+              <span>Skills</span>
             </div>
-            <div class="col-xs-12 col-sm-4 col-md-4  card">
-              <div class="card" id="jumbo2">
-                Computer Networking
+
+            <div class = "card-table">
+              <div class = "row">
+                <!-- put all the qualifications below -->
+                <div class="col-xs-12 col-sm-4 col-md-4 ">
+                  <div class="card" id="jumbo2">
+                    Machine Learning and Artificial Intelligence
+                  </div>
+                </div>
+                <div class="col-xs-12 col-sm-4 col-md-4 ">
+                  <div class="card" id="jumbo2">
+                    Object Oriented Design Patterns
+                  </div>
+                </div>
+                <div class="col-xs-12 col-sm-4 col-md-4 ">
+                  <div class="card" id="jumbo2">
+                    Data Structures and Algorithms
+                  </div>
+                </div>
               </div>
-            </div>
-            <div class="col-xs-12 col-sm-4 col-md-4  card">
-              <div class="card" id="jumbo2">
-                Operating Systems
+
+              <div class = "row">
+                <!-- put all the qualifications below -->
+                <div class="col-xs-12 col-sm-4 col-md-4  ">
+                  <div class="card" id="jumbo2">
+                    Problem Solving in C/C++
+                  </div>
+                </div>
+                <div class="col-xs-12 col-sm-4 col-md-4  ">
+                  <div class="card" id="jumbo2">
+                    Computer Networking
+                  </div>
+                </div>
+                <div class="col-xs-12 col-sm-4 col-md-4  ">
+                  <div class="card" id="jumbo2">
+                    Operating Systems
+                  </div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      </div>
 
     </div>
 
@@ -174,9 +175,18 @@
         $("#skills > div.card-table").toggle('fade',500);
       });
 
-      $('#education').click(function(){
-        $('#education > div.card-table-title').toggle('fade',500);
-        $('#education > div.card-table').toggle('fade',500);
+      $(function(){
+        var state = true;
+        $('#education').click(function(){
+          if(state){
+            $(this).animate({ height: '25%' },500);
+          } else {
+            $(this).animate({ height: '12%' },500);
+          }
+          state = !state;
+          $('#education > div.card-table-title').toggle('fade',500);
+          $('#education > div.card-table').toggle('fade',500);
+        });
       });
 // all lazy loaded classes occur below
 
