@@ -2,15 +2,38 @@
 .carousel-inner{height:100%;}
 
 .card-container{
-  margin: 0px 15px 0px 15px;
+  color: rgba(255,255,255,0.7);
+  font-family: cursive;
+  font-weight: bold;
 }
 
-.card-set {
+.card-table-title {
+  display: table;
+  width: 96%;
+  font-size: 5vh;
+  position: absolute;
+  left: 2%;
+  right: 2%;
+  height: 10%;
+  text-align: center;
+}
+
+span {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.card-table {
+  width:96%;
+  position: absolute;
+  left: 2%;
+  right: 2%;
 }
 
 .card {
   text-align: center;
   padding: 5px;
+  height: inherit;
 }
 
 #jumbo1{
@@ -52,7 +75,7 @@
 #pure{
   text-align: center;
   font-weight: bold;
-  font-size: 6vw;
+  font-size: 7vh;
   color: rgba(255,255,255,0.7);
 }
 
@@ -63,8 +86,12 @@
   color: rgba(255,255,255,0.7);
 }
 
+#skills{
+
+}
+
 h1{
-  font-family: Swag;
+  font-family: cursive;
 }
 
 .carousel-fade .carousel-inner .item {

@@ -51,42 +51,47 @@
         </div>
       </div>
 
-      <div class = "container-fluid card-container">
-
-        <div class = "row card-set">
-          <!-- put all the qualifications below -->
-          <div class="col-xs-12 col-sm-4 col-md-4 card">
-            <div class="card" id="jumbo2">
-              Machine Learning and Artificial Intelligence
-            </div>
-          </div>
-          <div class="col-xs-12 col-sm-4 col-md-4 card">
-            <div class="card" id="jumbo2">
-              Object Oriented Design Patterns
-            </div>
-          </div>
-          <div class="col-xs-12 col-sm-4 col-md-4 card">
-            <div class="card" id="jumbo2">
-              Data Structures and Algorithms
-            </div>
-          </div>
+      <div class = "container-fluid card-container" id = "skills">
+        <div class = "card-table-title" id = "jumbo2">
+          <span>Skills</span>
         </div>
 
-        <div class = "row card-set">
-          <!-- put all the qualifications below -->
-          <div class="col-xs-12 col-sm-4 col-md-4  card">
-            <div class="card" id="jumbo2">
-              Problem Solving in C/C++
+        <div class = "card-table">
+          <div class = "row card-set">
+            <!-- put all the qualifications below -->
+            <div class="col-xs-12 col-sm-4 col-md-4 card">
+              <div class="card" id="jumbo2">
+                Machine Learning and Artificial Intelligence
+              </div>
+            </div>
+            <div class="col-xs-12 col-sm-4 col-md-4 card">
+              <div class="card" id="jumbo2">
+                Object Oriented Design Patterns
+              </div>
+            </div>
+            <div class="col-xs-12 col-sm-4 col-md-4 card">
+              <div class="card" id="jumbo2">
+                Data Structures and Algorithms
+              </div>
             </div>
           </div>
-          <div class="col-xs-12 col-sm-4 col-md-4  card">
-            <div class="card" id="jumbo2">
-              Computer Networking
+
+          <div class = "row card-set">
+            <!-- put all the qualifications below -->
+            <div class="col-xs-12 col-sm-4 col-md-4  card">
+              <div class="card" id="jumbo2">
+                Problem Solving in C/C++
+              </div>
             </div>
-          </div>
-          <div class="col-xs-12 col-sm-4 col-md-4  card">
-            <div class="card" id="jumbo2">
-              Operating Systems
+            <div class="col-xs-12 col-sm-4 col-md-4  card">
+              <div class="card" id="jumbo2">
+                Computer Networking
+              </div>
+            </div>
+            <div class="col-xs-12 col-sm-4 col-md-4  card">
+              <div class="card" id="jumbo2">
+                Operating Systems
+              </div>
             </div>
           </div>
         </div>
@@ -140,9 +145,13 @@
 
       $(document).ready(function() {
         $('.carousel').carousel({interval: 0});
+        $('#skills > div.card-table').hide();
       });
 
-
+      $('#skills').click(function(){
+        $("#skills > div.card-table-title").toggle('fade',1000);
+        $("#skills > div.card-table").toggle('fade',1000);
+      });
 // all lazy loaded classes occur below
 
       $('.lazy').Lazy({
