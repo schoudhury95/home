@@ -51,6 +51,22 @@
         </div>
       </div>
 
+      <div class="container-fluid card-container" id = "education">
+        <div class="card-table-title" id="jumbo2">
+          <span>Education</span>
+        </div>
+        <div class="card-table">
+          <div class="row">
+            <div class="col-xs-4 col-sm-2">
+              UCSB Logo
+            </div>
+            <div class="col-xs-8 col-sm-10">
+              Bachelors in Computer Engineering
+            </div>
+          </div>
+        </div>
+      </div>
+
       <div class = "container-fluid card-container" id = "skills">
         <div class = "card-table-title" id = "jumbo2">
           <span>Skills</span>
@@ -146,11 +162,17 @@
       $(document).ready(function() {
         $('.carousel').carousel({interval: 0});
         $('#skills > div.card-table').hide();
+        $('#education > div.card-table').hide();
       });
 
       $('#skills').click(function(){
-        $("#skills > div.card-table-title").toggle('fade',1000);
-        $("#skills > div.card-table").toggle('fade',1000);
+        $("#skills > div.card-table-title").toggle('fade',500);
+        $("#skills > div.card-table").toggle('fade',500);
+      });
+
+      $('#education').click(function(){
+        $('#education > div.card-table-title').toggle('fade',500);
+        $('#education > div.card-table').toggle('fade',500);
       });
 // all lazy loaded classes occur below
 
