@@ -31,10 +31,25 @@ span {
   position: absolute;
 }
 
+#skills > .card-table > .row {
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+#skills > .card-table > .row > .col-xs-12 {
+  float: none;
+}
+
+#skills > .card-table > .row > .col-xs-12 > .card {
+  display: inline-block;
+}
+
+.img-responsive{
+  max-height: 20vh;
+}
 .card {
   text-align: center;
   padding: 5px;
-  height: inherit;
   font-size: 3vh;
   margin: 1%;
 }
@@ -96,6 +111,7 @@ span {
 #education{
   height: 12%;
 }
+
 h1{
   font-family: cursive;
 }
