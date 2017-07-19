@@ -31,17 +31,21 @@ span {
   position: absolute;
 }
 
-#skills > .card-table > .row {
-  overflow-x: auto;
+#skills,#work > .card-table > .row {
+  overflow-x: scroll;
   white-space: nowrap;
 }
 
-#skills > .card-table > .row > .col-xs-12 {
+#skills,#work > .card-table > .row > .col-xs-12,.col-sm-4 {
   float: none;
 }
 
-#skills > .card-table > .row > .col-xs-12 > .card {
+#skills,#work > .card-table > .row > .col-xs-12,.col-sm-4 > .card {
   display: inline-block;
+}
+
+#work > .card-table > .row > .col-xs-12,.col-md-8 > .card {
+  width: fit-content;
 }
 
 .img-responsive{
