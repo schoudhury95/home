@@ -82,7 +82,7 @@
 
             <div class = "card-table">
               <div class = "row">
-                <!-- put all the qualifications below -->
+                <!-- put all the skills below -->
                 <div class="col-xs-12 col-sm-4 col-md-4 ">
                   <div class="card" id="jumbo2">
                     Machine Learning and Artificial Intelligence
@@ -111,6 +111,43 @@
             </div>
           </div>
 
+          <div class = "container-fluid card-container" id = "work">
+            <div class = "card-table-title" id = "jumbo2">
+              <span>Work Experience</span>
+            </div>
+
+            <div class = "card-table">
+              <div class = "row">
+                <!-- put all the work experience below -->
+                <div class="col-xs-12 col-md-8">
+
+                  <div class="card" id="jumbo2">
+                    <!-- card design for jobs -->
+                    <div class="job-title">
+                      Title: Software/Algorithms Engineer Intern
+                    </div>
+                    <div class="job-company">
+                      Company: Thermo Fisher Scientific
+                    </div>
+                    <div class="job-duration">
+                      March 2017 - June 2017
+                    </div>
+                    <div class="job-description">
+                      <ul>
+                        <li>Worked with professional engineers at Thermo Fisher at Santa Barbara to bring new projects to completion regardless of scale</li>
+                        <li>Learned and used C#/.NET framework in Visual Studios on legacy code to implement new features</li>
+                        <li>Created tools projects and ports using XML in InstallShield and using SciPy and NumPy libraries in Python</li>
+                      </ul>
+                    </div>
+                    <!-- end card design for jobs -->
+                  </div>
+
+                </div>
+                <!-- end work experience section -->
+              </div>
+
+            </div>
+          </div>
     </div>
 
     <div class="item three lazy">
@@ -161,17 +198,40 @@
         $('.carousel').carousel({interval: 0});
         $('#skills > div.card-table').hide();
         $('#education > div.card-table').hide();
+        $('#work > div.card-table').hide();
       });
 
-      $('#skills').click(function(){
-        $("#skills > div.card-table-title").toggle('fade',500);
-        $("#skills > div.card-table").toggle('fade',500);
+      var skill_state = true;
+      var edu_state = true;
+      var work_state = true;
+      $(function(){
+        skill_state = true;
+        $('#skills').click(function(){
+          if(skill_state) {
+            if(isBreakpoint('xs')){
+              $(this).animate({ height: '25%' },500);
+            } else {
+              $(this).animate({ height: '23%' },500);
+            }
+          } else {
+            $(this).animate({ height: '12%'},500);
+          }
+          skill_state = !skill_state;
+          if($('#education > div.card-table').is(":visible")) {
+            closeEdu();
+          }
+          else if($('#work > div.card-table').is(":visible")) {
+            closeWork();
+          }
+          $("#skills > div.card-table-title").toggle('fade',500);
+          $("#skills > div.card-table").toggle('fade',500);
+        });
       });
 
       $(function(){
-        var state = true;
+        edu_state = true;
         $('#education').click(function(){
-          if(state){
+          if(edu_state){
             if(isBreakpoint('xs')){
               $(this).animate({ height: '20%' },500);
             } else {
@@ -180,11 +240,67 @@
           } else {
             $(this).animate({ height: '12%' },500);
           }
-          state = !state;
+
+          edu_state = !edu_state;
+
+          if($('#skills > div.card-table').is(":visible")) {
+            closeSkills();
+          } else if($('#work > div.card-table').is(":visible")) {
+            closeWork();
+          }
+
           $('#education > div.card-table-title').toggle('fade',500);
           $('#education > div.card-table').toggle('fade',500);
         });
       });
+
+      $(function(){
+        work_state = true;
+        $('#work').click(function(){
+          if(work_state){
+            if(isBreakpoint('xs')){
+              $(this).animate({ height: '20%' },500);
+            } else {
+              $(this).animate({ height: '25%' },500);
+            }
+          } else {
+            $(this).animate({ height: '12%' },500);
+          }
+          work_state = !work_state;
+
+          if($('#skills > div.card-table').is(":visible")) {
+            closeSkills();
+          } else if ($('#education > div.card-table').is(":visible")){
+            closeEdu();
+          }
+          
+          $('#work > div.card-table-title').toggle('fade',500);
+          $('#work > div.card-table').toggle('fade',500);
+        });
+      });
+
+// helper functions below:
+      function closeEdu(){
+        $('#education > div.card-table-title').toggle('fade',500);
+        $('#education > div.card-table').toggle('fade',500);
+        $('#education').animate({ height: '12%'},500);
+        edu_state = !edu_state;
+      }
+
+      function closeWork(){
+        $('#work > div.card-table-title').toggle('fade',500);
+        $('#work > div.card-table').toggle('fade',500);
+        $('#work').animate({ height: '12%'},500);
+        work_state = !work_state;
+      }
+
+      function closeSkills(){
+        $('#skills > div.card-table-title').toggle('fade',500);
+        $('#skills > div.card-table').toggle('fade',500);
+        $('#skills').animate({ height: '12%'},500);
+        skill_state = !skill_state;
+      }
+
       function isBreakpoint( alias ) {
         return $('.device-' + alias).is(':visible');
       }

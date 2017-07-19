@@ -47,11 +47,32 @@ span {
 .img-responsive{
   max-height: 20vh;
 }
+
 .card {
   text-align: center;
   padding: 5px;
   font-size: 3vh;
   margin: 1%;
+}
+
+.job-title {
+  text-align: left;
+  font-size: 3.5vh;
+}
+
+.job-company {
+  text-align: left;
+  font-size: 3vh;
+}
+
+.job-duration {
+  text-align: left;
+  font-size: 3vh;
+}
+
+.job-description {
+  text-align: left;
+  font-size: 2.5vh;
 }
 
 #jumbo1{
