@@ -44,8 +44,19 @@ span {
   display: inline-block;
 }
 
-#work > .card-table > .row > .col-xs-12,.col-md-8 > .card {
-  width: fit-content;
+#work > .card-table > .row {
+  overflow-x: scroll;
+  white-space: nowrap;
+}
+
+#work > .card-table > .row > .column {
+  float: none;
+  display: inline-block;
+  margin-left: 1%;
+  margin-right: 1%;
+}
+#work > .card-table > .row > .column > .card {
+  display: inline-block;
 }
 
 .img-responsive{
