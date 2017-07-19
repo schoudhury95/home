@@ -31,7 +31,7 @@ span {
   position: absolute;
 }
 
-#skills,#work > .card-table > .row {
+#skills > .card-table > .row {
   overflow-x: scroll;
   white-space: nowrap;
 }
