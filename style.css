@@ -3,7 +3,7 @@
 
 .card-container{
   color: rgba(255,255,255,0.7);
-  font-family: Zapf Chancery,cursive;
+  font-family: zapf;
   font-weight: bold;
   height: 12%;
 }
@@ -122,8 +122,8 @@ span {
 }
 
 @font-face {
-  font-family: Swag;
-  src: url('goodvibes.otf');
+  font-family: zapf;
+  src: url('zapf.otf');
 }
 
 #pure{
@@ -149,7 +149,7 @@ span {
 }
 
 h1{
-  font-family: Zapf Chancery,cursive;
+  font-family: zapf;
 }
 
 .carousel-fade .carousel-inner .item {
